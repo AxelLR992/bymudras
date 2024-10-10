@@ -38,6 +38,12 @@ const { title } = Astro.props;
         src: url("/fonts/roboto-condensed.ttf");
       }
 
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
       /* Apply Florentia to all titles */
       h1,
       h2,
@@ -48,7 +54,9 @@ const { title } = Astro.props;
         font-family: "Florentia", sans-serif;
       }
     </style>
-    <script>document.documentElement.classList.add('js')</script>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
   </head>
   <body>

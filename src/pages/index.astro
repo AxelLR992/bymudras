@@ -15,7 +15,7 @@ import { Image } from "astro:assets";
   <!-- Main banner -->
   <div class="banner">
     <div
-      class="ml-[150px] sm:ml-[300px] md:ml-[350px] lg:ml-[450px] xl:ml-[600px] md:duration-[800ms] md:taos:translate-x-[-200px]"
+      class="ml-[150px] sm:ml-[300px] md:ml-[350px] lg:ml-[450px] xl:ml-[600px] duration-[800ms] taos:translate-x-[-200px]"
     >
       <h1 class="text-4xl md:text-6xl xl:text-8xl">
         Soothe <br /> your body <br /> and soul
@@ -45,13 +45,13 @@ import { Image } from "astro:assets";
   <!-- Ends main banner -->
 
   <section class="mt-10">
-    <div class="flex justify-center md:duration-[800ms] md:taos:translate-y-[200px]">
+    <div class="flex justify-center duration-[800ms] taos:translate-y-[200px]">
       <h1 class="uppercase text-center text-5xl max-w-screen-md">
         <strong>Recovery cream</strong><br />
         Harnessing Nature's Strength + Enhanced with 8,000 MG CBD
       </h1>
     </div>
-    <div class="md:duration-[800ms] md:taos:translate-y-[200px]">
+    <div class="duration-[800ms] taos:translate-y-[200px]">
       <RecoveryCreamBtn className="uppercase block mx-auto mt-10"
         >Get recovery cream</RecoveryCreamBtn
       >
@@ -60,11 +60,11 @@ import { Image } from "astro:assets";
     <Image
       src={RecoveryCream}
       alt="Recovery Cream"
-      class="block mx-auto mt-10 md:duration-[800ms] md:taos:translate-y-[200px]"
+      class="block mx-auto mt-10 duration-[800ms] taos:translate-y-[200px]"
     />
 
     <div class="grid md:grid-cols-2 gap-5 container mx-auto">
-      <div class="md:duration-[800ms] md:taos:translate-x-[-200px]">
+      <div class="duration-[800ms] taos:translate-x-[-200px]">
         <Image src={Icon1} alt="Icon 1" class="block mx-auto mt-10" />
         <hr class="border-4 w-48 border-black mx-auto my-5" />
         <p class="text-center">
@@ -72,7 +72,7 @@ import { Image } from "astro:assets";
           8,000 MG CBD, is designed to calm, restore, and refresh your skin.
         </p>
       </div>
-      <div class="md:duration-[800ms] md:taos:translate-x-[200px]"> 
+      <div class="duration-[800ms] taos:translate-x-[200px]"> 
         <Image src={Icon2} alt="Icon 1" class="block mx-auto mt-10" />
         <hr class="border-4 w-48 border-black mx-auto my-5" />
         <p class="text-center">
@@ -106,7 +106,7 @@ import { Image } from "astro:assets";
           <Image
             src={RecoveryCream2}
             alt="Recovery Cream"
-            class="block mx-auto md:duration-[800ms] md:taos:translate-y-[200px]"
+            class="block mx-auto duration-[800ms] taos:translate-y-[200px]"
           />
         </div>
       </div>
@@ -115,7 +115,7 @@ import { Image } from "astro:assets";
 
   <section class="mt-20 container mx-auto">
     <h1 class="uppercase text-center text-5xl font-bold">Formulated to</h1>
-    <div class="grid md:grid-cols-2 md:duration-[800ms] md:taos:translate-x-[-200px]">
+    <div class="grid md:grid-cols-2 duration-[800ms] taos:translate-x-[-200px]">
       <div>
         <Image src={NourishImg} alt="" class="block mx-auto md:mr-0 mt-10" />
       </div>
@@ -130,7 +130,7 @@ import { Image } from "astro:assets";
         </div>
       </div>
     </div>
-    <div class="grid md:grid-cols-2 md:duration-[800ms] md:taos:translate-x-[200px]">
+    <div class="grid md:grid-cols-2 duration-[800ms] taos:translate-x-[200px]">
       <div class="md:order-2">
         <Image src={HarmonyImg} alt="" class="block mx-auto md:ml-0 mt-10" />
       </div>
