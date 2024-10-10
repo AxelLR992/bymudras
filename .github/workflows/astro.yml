@@ -24,6 +24,7 @@ env:
 
 jobs:
   build:
+    environment: Production
     name: Build
     runs-on: ubuntu-latest
     steps:
