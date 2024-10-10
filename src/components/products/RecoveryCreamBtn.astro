@@ -1,0 +1,21 @@
+---
+import Img from "../../assets/images/recovery-cream.png";
+
+interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<button
+  class={`bg-black hover:bg-gray-800 transition-all text-white font-bold py-3 px-5 snipcart-add-item ${className}`}
+  data-item-id="recovery-cream"
+  data-item-price="82.00"
+  data-item-description="Harnessing Nature's Strength + Enhanced with 8,000 MG CBD"
+  data-item-image={Img.src}
+  data-item-name="Recovery Cream"
+  data-item-weight="96.5"
+>
+  <slot />
+</button>

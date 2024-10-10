@@ -1,0 +1,30 @@
+---
+interface Props {
+  disabled?: boolean;
+  onclick?: string | null;
+  type?: "button" | "submit" | "reset";
+  href?: string;
+}
+
+const { disabled, onclick, type, href } = Astro.props;
+---
+
+{
+  href ? (
+    <a
+      class="bg-black hover:bg-gray-800 transition-all text-white font-bold py-2 px-4"
+      href={href}
+    >
+      <slot />
+    </a>
+  ) : (
+    <button
+      class="bg-black hover:bg-gray-800 transition-all text-white font-bold py-2 px-4"
+      disabled={disabled}
+      onclick={onclick}
+      type={type}
+    >
+      <slot />
+    </button>
+  )
+}

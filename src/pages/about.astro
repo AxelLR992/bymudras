@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import BadgeLogo from "../assets/images/badge-logo.svg";
+import OurCommunity from "../assets/images/our-community.jpg";
+---
+
+<Layout title="ByMudras - About Us">
+  <div class="container mx-auto mt-20">
+    <div class="max-w-screen-sm">
+      <h1 class="text-4xl">
+        Mudras provides safe, responsible access to revitalizing products
+      </h1>
+      <p class="mt-5">
+        At ByMudras, we believe in the power of nature to heal and rejuvenate.
+        Our journey began with a simple goal: to create a product that harnesses
+        the natural benefits of CBD to support recovery and well-being. After
+        years of research and dedication, we proudly offer our <strong>
+          Mudras Recovery Cream
+        </strong>, infused with <strong>8,000 MG of high-quality CBD</strong>,
+        designed to help you feel your best.
+      </p>
+    </div>
+    <div class="grid lg:grid-cols-2 mt-10">
+      <div>
+        <Image src={BadgeLogo} alt="Badge Logo" class="mx-auto" width="400" />
+      </div>
+      <div>
+        <h2 class="text-2xl">
+          We make sure our customers only receive high-quality products
+        </h2>
+        <p class="mt-5">
+          Our commitment to quality drives everything we do. From sourcing the
+          finest hemp-derived CBD to using state-of-the-art production
+          processes, we ensure that every jar of Mudras Recovery Cream meets the
+          highest standards of purity and effectiveness. Each batch is
+          rigorously tested for safety and potency, so you can feel confident
+          knowing you're getting the best of nature's recovery powers.
+        </p>
+      </div>
+    </div>
+    <div class="grid lg:grid-cols-2 mt-10">
+      <div class="lg:order-2">
+        <Image src={OurCommunity} alt="" class="mx-auto" width="400" />
+      </div>
+      <div class="lg:order-1">
+        <h2 class="text-2xl">Join our community</h2>
+        <p class="mt-5">
+          At ByMudras, we don't just sell a product; we're building a community
+          of individuals who believe in natural wellness and the power of
+          self-care. We invite you to become part of a movement that embraces
+          holistic healing.
+          <br /><br />
+          Discover the difference with ByMudras and experience recovery, the natural
+          way.
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr class="my-5 border-black border-2">
+</Layout>

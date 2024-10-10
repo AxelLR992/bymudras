@@ -1,0 +1,37 @@
+---
+interface Props {
+  label: string;
+  type: astroHTML.JSX.HTMLInputTypeAttribute | "textarea";
+  name: string;
+  required?: boolean;
+}
+
+const { label, type, name, required } = Astro.props;
+---
+
+{
+  type === "textarea" ? (
+    <div>
+      <label class="text-[#689858]" for={name}>
+        {label}
+      </label>
+      <textarea
+        class="bg-[#f0f5ee] block px-2 py-4 w-full text-[#689858]"
+        name={name}
+        required={required}
+      />
+    </div>
+  ) : (
+    <div>
+      <label class="text-[#689858]" for={name}>
+        {label}
+      </label>
+      <input
+        class="bg-[#f0f5ee] block px-2 py-4 w-full text-[#689858]"
+        type={type}
+        name={name}
+        required={required}
+      />
+    </div>
+  )
+}
