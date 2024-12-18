@@ -1,4 +1,4 @@
 
 RewriteEngine On
 RewriteCond %{REQUEST_URI} !^/coming-soon$
-RewriteRule ^(.*)$ /coming-soon.html [R=302,L]
+RewriteRule ^(.*)$ /coming-soon [R=302,L]
