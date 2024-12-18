@@ -1,5 +1,7 @@
 RewriteEngine On
 RewriteBase /
-RewriteCond %{REQUEST_URI} !^/coming-soon/?$
-RewriteCond %{REQUEST_URI} !^/coming-soon/.*
-RewriteRule ^(.*)$ /coming-soon [R=302,L]
+RewriteCond %{REQUEST_URI} !^/coming-soon$
+RewriteCond %{REQUEST_URI} !^/coming-soon/.*$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /coming-soon [L]
