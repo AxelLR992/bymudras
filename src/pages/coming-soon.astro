@@ -10,7 +10,9 @@ import Svg from "@cxa/astro-inline-svg";
   description="ByMudras creates products that support recovery and well-being. Stay turned for our upcoming website!"
   title="Coming soon"
 >
-  <div class="relative flex flex-col justify-between min-h-screen bg-black bg-image">
+  <div
+    class="relative flex flex-col justify-between min-h-screen bg-black bg-image"
+  >
     <div class="absolute inset-0 bg-black opacity-5"></div>
     <div class="relative flex flex-col items-center flex-grow justify-center">
       <Image src={logo} alt="By Mudras Logo" width={300} />
@@ -25,7 +27,7 @@ import Svg from "@cxa/astro-inline-svg";
 
       <a
         class="text-white border px-8 py-2 mt-6 uppercase flex items-center gap-1 bg-black"
-        href="mailto:info@mudras.com"
+        href="mailto:info@mudras.com?subject=Healing%20products%20from%20bymudras"
         ><Svg
           raw={envelope}
           define:symbol={{ id: "envelope", symbolProps: { fill: "white" } }}
