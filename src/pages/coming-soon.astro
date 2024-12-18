@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import SimpleLayout from "../layouts/SimpleLayout.astro";
+import logo from "../assets/images/badge-logo-white.svg";
+import envelope from "../assets/images/icons/envelope.svg?raw";
+import Svg from "@cxa/astro-inline-svg";
+---
+
+<SimpleLayout
+  description="ByMudras creates products that support recovery and well-being. Stay turned for our upcoming website!"
+  title="Coming soon"
+>
+  <div class="relative flex flex-col justify-between min-h-screen bg-black bg-image">
+    <div class="absolute inset-0 bg-black opacity-5"></div>
+    <div class="relative flex flex-col items-center flex-grow justify-center">
+      <Image src={logo} alt="By Mudras Logo" width={300} />
+      <h1 class="text-4xla text-white uppercase md:text-6xl xl:text-8xl">
+        Coming soon
+      </h1>
+      <hr class="w-1/4 border-none bg-white text-white h-1 my-8" />
+      <p class="text-white text-center max-w-xs md:max-w-none">
+        We're currently working on creating our new website. We'll be launching
+        soon.
+      </p>
+
+      <a
+        class="text-white border px-8 py-2 mt-6 uppercase flex items-center gap-1 bg-black"
+        href="mailto:info@mudras.com"
+        ><Svg
+          raw={envelope}
+          define:symbol={{ id: "envelope", symbolProps: { fill: "white" } }}
+          width={24}
+          class="inline"
+        />
+        <span>Contact Us</span></a
+      >
+    </div>
+
+    <footer class="relative text-white text-center mt-auto bottom-3">
+      ByMudras <br />
+      &copy; 2024 All rights reserved
+    </footer>
+  </div>
+</SimpleLayout>
+
+<style>
+  .bg-image {
+    background-image: url("../assets/images/coming-soon-bg.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+</style>

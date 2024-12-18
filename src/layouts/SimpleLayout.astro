@@ -1,0 +1,62 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description || "ByMudras website"} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>By Mudras | {title}</title>
+
+    <style is:global>
+      @font-face {
+        font-family: "Florentia";
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("/fonts/florentia.ttf");
+      }
+
+      @font-face {
+        font-family: "Roboto";
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("/fonts/roboto-condensed.ttf");
+      }
+
+      /* Apply Florentia to all titles */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Florentia", sans-serif;
+      }
+
+      /* Apply Roboto to all text */
+      p,
+      a,
+      span {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
